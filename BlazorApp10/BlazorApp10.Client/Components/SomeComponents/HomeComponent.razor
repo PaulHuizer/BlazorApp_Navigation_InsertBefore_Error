@@ -1,0 +1,32 @@
+﻿<h1>Hello, world!</h1>
+
+Welcome to your new app.
+
+
+<p>Steps to reproduce (on dotnet 10):</p>
+
+<ul>
+    <li>Click on counter page ... </li>
+    <li>Click the counter ... see the counter incrementing</li>
+    <li>Click the home link --> no navigation</li>
+    <li>
+        Check console, see the error:
+        <pre>
+            blazor.web.j8lzlu28q6.js:1 Debugging hotkey: Shift+Alt+D (when application has focus)
+            blazor.web.j8lzlu28q6.js:1 Uncaught (in promise) TypeError: Cannot read properties of null (reading 'insertBefore')
+            at q (blazor.web.j8lzlu28q6.js:1:22605)
+            at blazor.web.j8lzlu28q6.js:1:182422
+            at li (blazor.web.j8lzlu28q6.js:1:182431)
+            at si (blazor.web.j8lzlu28q6.js:1:179662)
+            at ai (blazor.web.j8lzlu28q6.js:1:181600)
+            at si (blazor.web.j8lzlu28q6.js:1:179225)
+            at ai (blazor.web.j8lzlu28q6.js:1:181600)
+            at si (blazor.web.j8lzlu28q6.js:1:179225)
+            at ii (blazor.web.j8lzlu28q6.js:1:177611)
+            at blazor.web.j8lzlu28q6.js:1:188366
+            q blazor.web.j8lzlu28q6.js:1
+        </pre>
+    </li>
+</ul>
+
+<p>Same project, on dotnet 9.0 ... no issue.</p>

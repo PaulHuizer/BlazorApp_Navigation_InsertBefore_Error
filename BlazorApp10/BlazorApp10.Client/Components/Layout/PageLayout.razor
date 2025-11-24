@@ -1,0 +1,30 @@
+﻿@* PageLayout.razor *@
+
+
+@* Only run this layout in interactive mode -- after hydration*@
+@if (!RendererInfo.IsInteractive)
+    return;
+
+
+<div class="page">
+
+
+    <div class="left">
+        <NavLink href="/" class="nav-link" Match="NavLinkMatch.All">Home</NavLink>
+        <NavLink href="counter">Counter page</NavLink>
+        <NavLink href="weather">Weather page</NavLink>
+    </div>
+
+    <div class="main">
+        @ChildContent
+    </div>
+
+
+</div>
+    <footer>
+        <p>Copyright © 2022 - @DateTime.UtcNow.Year</p>
+    </footer>
+
+@code {
+    [Parameter] public RenderFragment? ChildContent { get; set; }
+}
